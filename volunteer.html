@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Contact form</title>
+
+    <!-- fontawsome  -->
+    <script src="https://kit.fontawesome.com/eff9abb81a.js" crossorigin="anonymous"></script>
+
+
+    <!-- favicon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/favicon.ico">
+
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: auto;
+        }
+
+        .volmainformcontainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bgform {
+            min-height: 72vh;
+            width: 100%;
+            background-image: url(images/vtgb.jpg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 100px;
+        }
+
+
+
+        .head {
+            background-color: rgb(233, 160, 24);
+            color: black;
+            font-size: 35px;
+            padding: 20px;
+        }
+        body{ 
+            background-color: rgba(255, 255, 255, 0.808); 
+        }
+        .form {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        #form-title {
+            font-family: "Quicksand";
+            font-size: 50px;
+            margin: 20px;
+            text-align: start;
+            line-height: 1.25;
+        }
+
+        .form-below {
+            font-family: "Quicksand";
+            font-weight: bold;
+            margin: 20px;
+            text-align: start;
+
+        }
+
+        .redd {
+            color: red;
+        }
+
+        .labell {
+            color: black
+        }
+
+        .form-input {
+            font-family: "Quicksand";
+            margin: 20px;
+            width: 90%;
+            height: 46px;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 6px;
+        }
+
+        .f-checkbox {
+            margin-left: 20px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-right: 10px;
+            width: 25px;
+            height: 25px;
+        }
+
+        .f-radio {
+            margin-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            margin-right: 10px;
+            width: 25px;
+            height: 25px;
+        }
+
+        .f-file{
+            margin-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            margin-right: 10px;
+            width: 200px;
+        }
+
+        #stime{
+            width: 150px;
+        }
+
+        #f-textarea{
+            font-family: "Quicksand";
+            margin: 20px;
+            width: 90%;
+            height: 175px;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius:6px;
+        }
+
+        .f-btn{
+            margin: 20px;
+            margin-top: 10px;
+            width: 120px;
+            background-color:white;
+            border: 1px solid #e90000;
+            font-size: 1.3rem;
+            padding: 5px 8px;
+            height: 40px;
+            border-radius: 3px;
+            color: black;
+            transition:0.7s;
+        }
+
+        .f-btn:hover{
+            background-color:#e90000;
+            border-color: #e90000;
+            color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <a id="tophelplineicon" href="contactus.html" style="text-decoration: none;">
+        
+        <img id="phoneimage" src="other_icon/phone-call.png" alt="">
+        <p id="phonetext" style="color: black;">
+            Report an ill and injured animal in surat
+        </p>
+    </a>
+
+    <nav>
+        <img id="orgicon" src="other_icon/orgicon.jpeg" alt="">
+        <a href="index.html">Home Page</a>
+        <a href="about.html">About Us</a>
+        <a href="successstory.html">Success Stories</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="joinus.html">Join Us</a>
+        <a class="donatediv" href="./Login_v3/index.html" >
+            <p>DONATE</p>
+            <img src="other_icon/heart.png" alt="">
+        </a>
+    </nav>
+
+    <div class="bgform">
+        <h2 class="head">BE A Volunteer</h2><br>
+    </div>
+    
+
+    <div class="volmainformcontainer">
+        <div class="form">
+            <h1 id="form-title">Volunteer Contact form Form</h1>
+            <h3 class="form-below">Fields marked with an <span class="redd">*</span> are required</h3>
+            <form action="/joinasvolunteer" name="form" method="post">
+                <div class="box">
+                    <label for="fname" class="form-below labell">First Name <span class="redd">*</span></label>
+                    <br>
+                    <input type="text" name="fname" class="form-input" placeholder="Enter Your First Name" required>
+                </div>
+
+                <div class="box">
+                    <label for="lname" class="form-below labell">Last Name <span class="redd">*</span></label>
+                    <br>
+                    <input type="text" name="lname" class="form-input" placeholder="Enter Your Last Name" required>
+                </div>
+
+                <div class="box">
+                    <label for="city" class="form-below labell">City <span class="redd">*</span> </label>
+                    <br>
+                    <select name="city" id="scity" class="form-input" required>
+                        <option value="Select City">Select City</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Anand">Anand</option>
+                        <option value="Gandhinagar">Gandhinagar</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Bharuch">Bharuch</option>
+                        <option value="vadodara">vadodara</option>
+                        <option value="Valsad">Valsad</option>
+                        <option value="Rajkot">Rajkot</option>
+                    </select>
+                </div>
+                <div class="box">
+                    <label for="email" class="form-below labell">Email <span class="redd">*</span></label>
+                    <br>
+                    <input type="text" id="email" name="email" class="form-input" placeholder="Enter Your Email ID" required>
+                </div>
+
+                <div class="box">
+                    <label for="cemail" class="form-below labell">Confirm Email <span class="redd">*</span></label>
+                    <br>
+                    <input type="text" id="cmail" name="cemail" class="form-input" placeholder="Confirm Your Email ID" required>
+                </div>
+
+                <div class="box">
+                    <label for="q1" class="form-below labell">Have you been to MNM before? <span
+                            class="redd">*</span></label>
+                    <br>
+                    <input type="radio" name="check" class="f-checkbox" value="Yes, I visited">
+                    <label for="c1" class="form-below labell" id="con">Yes, I visited</label>
+                    <br>
+                    <input type="radio" name="check" class="f-checkbox" value="Yes, I volunteered for less than a week">
+                    <label for="c1" class="form-below labell" id="con">Yes, I volunteered for less than a week</label>
+                    <br>
+                    <input type="radio" name="check" class="f-checkbox" value="Yes, I volunteered for more than a week">
+                    <label for="c1" class="form-below labell" id="con">Yes, I volunteered for more than a week</label>
+                    <br>
+                    <input type="radio" name="check" class="f-checkbox" value="No, not yet!"
+                        style="margin-bottom: 15px">
+                    <label for="c1" class="form-below labell" id="con" style="margin-bottom: 15px">No, not yet!</label>
+                </div>
+
+                <div class="box">
+                    <label for="joiningDate" class="form-below labell">(Estimated) Joining Date at MNM <span
+                            class="redd">*</span></label>
+                    <br>
+                    <input type="date" name="date" class="form-input" required>
+                </div>
+
+                <div class="box">
+                    <label for="mobileno" class="form-below labell">Enter Your Mobile number <span
+                            class="redd">*</span></label>
+                    <br>
+                    <input type="text" name="tel" id="mobile" class="form-input" placeholder="Enter Your mobile number" required>
+                </div>
+
+                <div class="box">
+                    <label for="skill" class="form-below labell">Do you have any veterinary medical skills or
+                        experience? <span class="redd">*</span></label>
+                    <br>
+                    <input type="radio" value="yes" name="skills" class="f-radio">
+                    <label for="yes" class="form-below labell" id="con">YES</label><br>
+                    <input type="radio" value="no" name="skills" class="f-radio">
+                    <label for="yes" class="form-below labell" id="con">NO</label>
+                </div>
+
+                <div class="box">
+                    <label for="address" class="form-below labell">Enter Your Residence Address<span
+                            class="redd">*</span></label>
+                    <br>
+                    <input type="text" name="address" class="form-input" placeholder="Enter Your Residence Address"
+                        required>
+                </div>
+
+
+
+                <div class="box">
+                    <label for="time" class="form-below labell">How much time a week you can spend for MNM ? <span
+                            class="redd">*</span> </label>
+                    <br>
+                    <select name="time" id="stime" class="form-input" required>
+                        <option value="Select time">Select time</option>
+                        <option value="1 hour">1 hour</option>
+                        <option value="2 hour">2 hour</option>
+                        <option value="3 hour">3 hour</option>
+                        <option value="4 hour">4+ hour</option>
+                    </select>
+                </div>
+
+                <div class="box">
+                    <label for="comment" class="form-below labell">Do you have any comments or questions? <span
+                            class="redd">*</span></label>
+                    <br>
+                    <textarea name="comment" id="f-textarea" cols="30" rows="10" required></textarea>
+                </div>
+
+                <div class="box">
+                    <input type="submit" onclick="return response()" value="submit" class="f-btn" >
+                </div>
+            </form>
+            <h3 class="form-below"> <span class="redd"> Please correct errors before submitting this form.</span></h3>
+
+        </div>
+    </div>
+
+    <!-- social media  -->
+    <div class="icon-bar">
+        <a href="https://www.facebook.com/Manavtanimaheksurat/" target="_blank" class="facebook"><i class="fab fa-2x fa-facebook"></i></a>
+        <a href="https://www.instagram.com/invites/contact/?i=1uuomytwvxtj8&utm_content=l69h4k2" target="_blank" class="instagram"><i class="fab fa-2x fa-instagram"></i></a>
+        <a href="https://youtube.com/channel/UCJrUVPB1GN6p1guz0PWfcPw" target="_blank" class="youtube"><i class="fab fa-2x fa-youtube"></i></a>
+    </div>
+
+    <footer>
+        <div class="first">
+            <div class="leftpart">
+                <p class="navigation">Navigation</p>
+                <a href="index.html">Home&nbspPage</a>
+                <a href="about.html">About&nbspUs</a>
+                <a href="successstory.html">Success&nbspStories</a>
+                <a href="contactus.html">Contact&nbspUs</a>
+                <a href="joinus.html">Join&nbspUs</a>
+                <a class="donatediv" href="./Login_v3/index.html">
+                    <p>DONATE</p>
+                    <img src="other_icon/heart.png" alt="">
+                </a>
+            </div>
+            <div class="rightpart">
+                <div class="findus">
+                    <p class="firstchild">Find us</p>
+                    <p>C/1 103 nature valley homes <br> saroli surat 395010</p>
+                    <p>manavtanimaheksurat@gmail.com</p>
+                </div>
+                <div class="followus">
+                    <p class="firstchild">Follow us!</p>
+                    <div class="icons">
+                        <a href="https://www.facebook.com/Manavtanimaheksurat/" target="_blank"  ><img src="other_icon/facebook.webp" alt=""></a>
+                        <a href="https://www.instagram.com/invites/contact/?i=1uuomytwvxtj8&utm_content=l69h4k2" target="_blank" ><img src="other_icon/instagram.webp" alt=""></a>
+                        <a href="https://youtube.com/channel/UCJrUVPB1GN6p1guz0PWfcPw" target="_blank" ><img src="other_icon/youtube.webp" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second">
+            <p>Copyright © 2022 MANAVTANI MAHEK PUBLIC CHARITABLE TRUST All Rights Reserved</p>
+            <p>made with love by <a style="color: #fe9516;" href="https://www.linkedin.com/in/yash-parsana-a9176a1b2/">YashParsana</a> & <a style="color: #fe9516;" href="https://www.linkedin.com/search/results/all/?keywords=dharmesh%20vala&origin=RICH_QUERY_SUGGESTION&position=0&searchId=5d8ed71f-66d4-45cd-99e1-a6ec0dac5c67&sid=Mth">Dharmeshvala</a></p>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+    <script>
+        response=()=>{
+
+            const email=document.getElementById("email").value
+            const mobile=document.getElementById("mobile").value
+            const cemail=document.getElementById("cemail").value
+
+
+            console.log(`${email} ${cemail} ${mobile}`);
+
+            if(email!=cemail)
+            {
+                alert("Please enter same email")
+                return false
+            }
+            if(!(/^[6-9]\d{9}$/gi.test(mobile)))
+            {
+                alert("Please Enter Valid mobile Number")
+                return false
+            }
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)))
+            {
+                alert("Please Enter Valid email")
+                return false
+            }
+            else{
+                alert("Your Response is saved")
+                return true
+            }
+        }
+    </script>
+
+</html>
